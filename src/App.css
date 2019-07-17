@@ -1,0 +1,117 @@
+.App {
+  font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua",
+    Georgia, serif;
+  text-align: center;
+  letter-spacing: 1px;
+  color: ivory;
+  background-image: url("https://background-tiles.com/overview/grey/patterns/large/1005.png");
+  background-repeat: repeat-x repeat-y;
+  max-width: 100vw;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.content-window {
+  padding: 36px 16px 16px 16px;
+  text-align: left;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 2.5em;
+}
+
+.fadeContent {
+  opacity: 1;
+  filter: alpha(opacity=30);
+}
+
+.header {
+  background-image: url("./images/piano_lower_cropped.jpg");
+  background-repeat: repeat-x;
+  background-position: bottom;
+  padding-top: 16px;
+  padding-bottom: 36px;
+}
+
+.fixed-nav,
+.default-nav {
+  background-color: #061616;
+  color: ivory;
+  position: relative;
+  z-index: 2;
+  border-top: 1px solid #4f4f4f;
+  max-width: 100vw;
+  box-shadow: 0px 6px 16px 16px #061616;
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+
+.fixed-nav h4,
+.default-nav h4 {
+  font-size: 1em;
+  letter-spacing: 3px;
+  transition: letter-spacing 0.5s;
+  margin-top: 10px;
+}
+
+.fixed-nav h4:hover,
+.default-nav h4:hover {
+  cursor: pointer;
+  letter-spacing: 6px;
+  transition: letter-spacing 1s;
+}
+
+.fixed-nav {
+  position: fixed;
+}
+
+.footer {
+  box-shadow: 0px -6px 16px 16px #061616;
+  background-color: #061616;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5em;
+  font-size: 0.8em;
+}
+
+.fixed-nav {
+  position: fixed;
+  top: 0;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+.blogPost {
+  box-shadow: 0px 0px 8px 8px #202122;
+  background-color: #202122;
+  border-bottom: 1px solid #4f4f4f;
+  margin-bottom: 8px;
+  color: white;
+  padding: 8px;
+}
+
+hr {
+  color: ivory;
+}
