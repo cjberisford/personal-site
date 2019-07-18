@@ -1,13 +1,16 @@
 import React from "react";
 import "./App.css";
 
+import Header from "./components/header/header.js";
 import Nav from "./components/navbar/nav.js";
 import About from "./routes/about/about";
 import Home from "./routes/home/home";
-import Music from "./routes/music/music";
+import Projects from "./routes/projects/projects";
 import Contact from "./routes/contact/contact";
 
-var page;
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 class Routes extends React.Component {
   constructor(props) {
@@ -15,7 +18,7 @@ class Routes extends React.Component {
 
     this.homeHandler = this.homeHandler.bind(this);
     this.aboutHandler = this.aboutHandler.bind(this);
-    this.musicHandler = this.musicHandler.bind(this);
+    this.projectsHandler = this.projectsHandler.bind(this);
     this.contactHandler = this.contactHandler.bind(this);
 
     this.state = {
@@ -35,9 +38,9 @@ class Routes extends React.Component {
     });
   }
 
-  musicHandler() {
+  projectsHandler() {
     this.setState({
-      currentPage: "music"
+      currentPage: "projects"
     });
   }
 
@@ -51,28 +54,38 @@ class Routes extends React.Component {
     switch (currentPage) {
       case "home":
         return <Home />;
-        break;
+
       case "about":
         return <About />;
-        break;
-      case "music":
-        return <Music />;
-        break;
+
+      case "projects":
+        return <Projects />;
+
       case "contact":
         return <Contact />;
-        break;
+      default:
+        return <Home />;
     }
   }
   render() {
     return (
       <>
+        <Header className="header" home={this.homeHandler} />
         <Nav
           home={this.homeHandler}
           about={this.aboutHandler}
-          music={this.musicHandler}
+          projects={this.projectsHandler}
           contact={this.contactHandler}
         />
-        {this.displayPage(this.state.currentPage)}
+        <Container>
+          <Row>
+            <Col xs={0} sm={0} />
+            <Col xs={12} sm={12} className="content-pane">
+              {this.displayPage(this.state.currentPage)}
+            </Col>
+            <Col xs={0} sm={0} />
+          </Row>
+        </Container>
       </>
     );
   }

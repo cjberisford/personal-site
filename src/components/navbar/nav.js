@@ -37,15 +37,23 @@ class Nav extends React.Component {
           }
         >
           <Row>
-            <Col>
-              <h4 onClick={this.props.about}>About</h4>
+            <Col xs={0} sm={0} />
+            <Col xs={12} sm={0}>
+              <Container>
+                <Row>
+                  <Col xs={4} sm={4} className="left-col">
+                    <h4 onClick={this.props.about}>Weblog</h4>
+                  </Col>
+                  <Col xs={4} sm={4}>
+                    <h4 onClick={this.props.projects}>Projects</h4>
+                  </Col>
+                  <Col xs={4} sm={4} className="right-col">
+                    <h4 onClick={this.props.contact}>Contact</h4>
+                  </Col>
+                </Row>
+              </Container>
             </Col>
-            <Col>
-              <h4 onClick={this.props.music}>Music</h4>
-            </Col>
-            <Col>
-              <h4 onClick={this.props.contact}>Contact</h4>
-            </Col>
+            <Col xs={0} sm={0} />
           </Row>
         </Container>
       </nav>
