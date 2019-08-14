@@ -19,7 +19,7 @@
 }
 
 .default-nav {
-    background-image: url("./images/bg/bg1.jpg");
+    background-image: url("./images/bg/bg4-1080.jpg");
 }
 
 .fixed-nav {
@@ -244,7 +244,7 @@
         height: 3em;
     }
     .default-nav h5 {
-        padding-top: 0em;
+        padding-top: 0.1em;
         font-size: 1.8em;
         line-height: 0.8em;
     }

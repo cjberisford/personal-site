@@ -35,18 +35,14 @@ class App extends React.Component {
   }
 
   showMobileNav() {
-    console.log(this.state.mobileNav);
     if (this.state.mobileNav) {
-      console.log("setting to false");
       this.setState({ mobileNav: false });
     } else {
-      console.log("setting to true");
       this.setState({ mobileNav: true });
     }
   }
 
   componentDidMount() {
-    console.log(this.height);
     const el = document.querySelector("nav");
     this.setState({ top: el.offsetTop, height: el.offsetHeight / 3 });
     window.addEventListener("scroll", this.handleScroll);
